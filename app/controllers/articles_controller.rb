@@ -24,4 +24,8 @@ class ArticlesController < ApplicationController
     @article.destroy
     redirect_to articles_path
   end
+
+  def edit
+    @article = Article.find(params[:id])
+  end
 end
